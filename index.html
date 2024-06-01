@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Data Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="">
+        <h1>Employee Databse Management</h1>
+        <button class="createEmployee">Add Employee</button>
+      </header>
+      <div class="employees">
+        <div class="employees__names">
+          <span class="employee__names--title"> Employee List </span>
+          <div class="employee__names--list"></div>
+        </div>
+        <div class="employees__single">
+          <span class="employee__single--title"> Employee Information </span>
+          <div class="employee__single--info"></div>
+        </div>
+      </div>
+    </div>
+    <div class="addEmployee">
+      <form class="addEmployee_create">
+        <h1>Add a new Empoyee</h1>
+          <div class="fullName">
+            <input type="text" name="firstName" required class="firstName" placeholder="First Name" />
+          <input type="text" name="lastName" required class="lastName" placeholder="Last Name"  />
+          </div>
+        <input type="text" name="imageUrl" placeholder="Image Url (Optional)" />
+        <input type="number" name="Salary" required placeholder="Salary" />
+        <input type="email" name="email" placeholder="email" required />
+        <input type="text" name="address" placeholder="address" required />
+        <input
+          type="date"
+          name="dob"
+          placeholder="Date of Birth"
+          class="addEmployee_create--dob"
+          required
+        />
+        <button type="submit" 
+        class="addEmployee_create--submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
