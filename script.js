@@ -6,7 +6,24 @@
   const editBtn = document.querySelector(".edit");
   const editEmployee = document.querySelector(".editEmployee");
   const editEmployeeForm = document.querySelector(".editEmployee_form");
+  let employees = JSON.parse(localStorage.getItem("employees")) || res;
+  let selectedEmployee = employees[0];
+  // selected emplopyee data
+  let selectedEmployeeId = employees[0].id;
 
+  // button segment
+  const createEmployee = document.querySelector(".createEmployee");
+  const addEmployeeModal = document.querySelector(".addEmployee");
+  const addEmployeeForm = document.querySelector(".addEmployee_create");
+
+  const employeeList = document.querySelector(".employee__names--list");
+  //   const employeeItem = document.querySelector(".employes__name--item")
+  const employeeInfo = document.querySelector(".employee__single--info");
+  const saveToLocalStorage = () => {
+    localStorage.setItem("employees", JSON.stringify(employees));
+  };
+
+  // selected employee Id
   // Printing the previous values LOGIC:
   editBtn.addEventListener("click", (e) => {
     editEmployee.style.display = "flex";
@@ -23,10 +40,7 @@
       imageUrl,
     } = selectedEmployee;
 
-   
-
     [...editEmployeeForm].map((data, index) => {
-      
       if (data.name === "firstName") {
         data.value = firstName;
       } else if (data.name === "lastName") {
@@ -78,10 +92,10 @@
           employee.dob = empData.dob;
           employee.age = empData.age;
           employee.imageUrl = empData.imageUrl;
+          saveToLocalStorage();
         }
       }
     });
-
     renderImployees();
     editEmployeeForm.reset();
     editEmployee.style.display = "none";
@@ -92,11 +106,6 @@
       editEmployee.style.display = "none";
     }
   });
-
-  // button segment
-  const createEmployee = document.querySelector(".createEmployee");
-  const addEmployeeModal = document.querySelector(".addEmployee");
-  const addEmployeeForm = document.querySelector(".addEmployee_create");
 
   createEmployee.addEventListener("click", () => {
     addEmployeeModal.style.display = "flex";
@@ -134,22 +143,12 @@
     empData.age =
       new Date().getFullYear() - parseInt(empData.dob.slice(0, 4), 10);
 
-
     employees.push(empData);
+    saveToLocalStorage();
     renderImployees();
     addEmployeeForm.reset();
     addEmployeeModal.style.display = "none";
   });
-
-  let employees = res;
-  let selectedEmployee = employees[0];
-  // selected emplopyee data
-  let selectedEmployeeId = employees[0].id;
-  // selected employee Id
-
-  const employeeList = document.querySelector(".employee__names--list");
-  //   const employeeItem = document.querySelector(".employes__name--item")
-  const employeeInfo = document.querySelector(".employee__single--info");
 
   // Select Employee LOGIC and deleting employee
 
@@ -163,6 +162,7 @@
       employees = employees.filter(
         (emp) => String(emp.id) !== e.target.parentNode.id
       );
+      saveToLocalStorage();
     }
     if (String(selectedEmployeeId) === e.target.parentNode.id) {
       selectedEmployeeId = employees[0]?.id || -1;
