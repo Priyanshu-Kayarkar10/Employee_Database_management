@@ -1,62 +1,14 @@
 [
     {
-        "id": "1",
+        "id": 0,
         "imageUrl": "https://svgur.com/i/16hm.svg",
-        "contactNumber": "00000 00000",
+        "contactNumber": "010101",
         "firstName": "Thomas",
         "lastName": "Leannon",
         "email": "Thomas.Leannon@gmail.com",
-        "age": 30,
+        "age": "30",
         "dob": "26/08/2024",
-        "salary": 2,
-        "address": "Address"
-    },
-    {
-        "id": "2",
-        "imageUrl": "https://svgur.com/i/16hm.svg",
-        "contactNumber": "00000 00000",
-        "firstName": "Priyashu",
-        "lastName": "Kayarkar",
-        "email": "priyanshuKayarkar@gmail.com",
-        "age": 18,
-        "dob": "25/06/2005",
-        "salary": 2,
-        "address": "Address"
-    },
-    {
-        "id": "3",
-        "imageUrl": "https://svgur.com/i/16hm.svg",
-        "contactNumber": "00000 00000",
-        "firstName": "Thomas",
-        "lastName": "Leannon",
-        "email": "Thomas.Leannon@gmail.com",
-        "age": 30,
-        "dob": "26/08/2024",
-        "salary": 2,
-        "address": "Address"
-    },
-    {
-        "id": "4",
-        "imageUrl": "https://svgur.com/i/16hm.svg",
-        "contactNumber": "00000 00000",
-        "firstName": "Thomas",
-        "lastName": "Leannon",
-        "email": "Thomas.Leannon@gmail.com",
-        "age": 30,
-        "dob": "26/08/2024",
-        "salary": 2,
-        "address": "Address"
-    },
-    {
-        "id": "5",
-        "imageUrl": "https://svgur.com/i/16hm.svg",
-        "contactNumber": "00000 00000",
-        "firstName": "Thomas",
-        "lastName": "Leannon",
-        "email": "Thomas.Leannon@gmail.com",
-        "age": 30,
-        "dob": "26/08/2024",
-        "salary": 2,
+        "Salary": 2,
         "address": "Address"
     }
 ]

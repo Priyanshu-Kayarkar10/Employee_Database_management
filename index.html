@@ -20,17 +20,44 @@
         </div>
         <div class="employees__single">
           <span class="employee__single--title"> Employee Information </span>
+          <svg
+            class="edit"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 64 64"
+          >
+            <path
+              d="M39.086 17.914l7 7L21.505 49.495l-9.201 4.412c-1.367.457-2.668-.844-2.211-2.211l4.412-9.201L39.086 17.914zM41.914 15.086l4.5-4.5c.781-.781 2.047-.781 2.828 0l4.172 4.172c.781.781.781 2.047 0 2.828l-4.5 4.5L41.914 15.086z"
+            ></path>
+          </svg>
           <div class="employee__single--info"></div>
         </div>
       </div>
     </div>
+
     <div class="addEmployee">
       <form class="addEmployee_create">
         <h1>Add a new Empoyee</h1>
-          <div class="fullName">
-            <input type="text" name="firstName" required class="firstName" placeholder="First Name" />
-          <input type="text" name="lastName" required class="lastName" placeholder="Last Name"  />
-          </div>
+        <div class="fullName">
+          <input
+            type="text"
+            name="firstName"
+            required
+            class="firstName"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="lastName"
+            required
+            class="lastName"
+            placeholder="Last Name"
+          />
+        </div>
+        <input type="number" name="contactNumber"
+          placeholder="Phone Number"
+          >
         <input type="text" name="imageUrl" placeholder="Image Url (Optional)" />
         <input type="number" name="Salary" required placeholder="Salary" />
         <input type="email" name="email" placeholder="email" required />
@@ -42,8 +69,45 @@
           class="addEmployee_create--dob"
           required
         />
-        <button type="submit" 
-        class="addEmployee_create--submit">Submit</button>
+        <button type="submit" class="addEmployee_create--submit">Submit</button>
+      </form>
+    </div>
+    <div class="editEmployee">
+      <form class="editEmployee_form">
+        <h1>Edit Empoyee</h1>
+        <div class="editfullName">
+          <input
+            type="text"
+            name="firstName"
+            required
+            class="firstName"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="lastName"
+            required
+            class="lastName"
+            placeholder="Last Name"
+          />
+        </div>
+        <!-- <div class="otherInputFields"> -->
+          <input type="number" name="contactNumber"
+          placeholder="Phone Number"
+          >
+          <input type="text" name="imageUrl" placeholder="Image Url (Optional)" />
+        <input type="number" name="Salary" required placeholder="Salary" />
+        <input type="email" name="email" placeholder="email" required />
+        <input type="text" name="address" placeholder="address" required />
+        <input
+          type="date"
+          name="dob"
+          placeholder="Date of Birth"
+          class="editEmployee--dob"
+          required
+        />
+        <!-- </div> -->
+        <button type="submit" class="editEmployee--submit">Submit</button>
       </form>
     </div>
 

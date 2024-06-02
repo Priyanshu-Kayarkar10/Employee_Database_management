@@ -63,6 +63,26 @@ header>button:hover {
     border: none;
 }
 
+.edit {
+    text-align: center;
+    position: absolute;
+    right: 4.5rem;
+    width: 1.7rem;
+    top: 5.65rem;
+    fill: white;
+    background: #2e2c2c;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.edit:hover {
+    cursor: pointer;
+    background: white;
+    fill: black;
+}
+
+
+
 .employee__single--title,
 .employee__names--title {
     font-weight: bold;
@@ -149,6 +169,95 @@ header>button:hover {
     text-transform: lowercase;
 }
 
+
+
+
+.editfullName,
+.fullName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.editfullName>input ,.fullName>input {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    width: 60%;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #fafafa;
+    outline: none;
+    letter-spacing: 1.3px;
+}
+
+
+
+.addEmployee_create {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 2rem 1rem;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    /* justify-content: start; */
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    box-shadow: 0 0 1rem rgba(65, 65, 65, 0.719);
+    border-radius: 0.5rem;
+    padding: 0.8rem 4rem;
+}
+
+.editEmployee_form>input,
+.addEmployee_create>input {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #fafafa;
+    outline: none;
+    letter-spacing: 1.3px;
+}
+
+.editEmployee_form>button,
+.addEmployee_create>button {
+    width: 30%;
+    height: 40%;
+    color: #fafafa;
+    background-color: rgba(90, 90, 90, 0.685);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.editEmployee_form>button:hover,
+.addEmployee_create--submit:hover {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.664);
+    border: none;
+}
+
+.addEmployee_create input::-webkit-outer-spin-button,
+.addEmployee_create input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.editEmployee input::-webkit-outer-spin-button,
+.editEmployee input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
 .addEmployee {
     position: absolute;
     display: flex;
@@ -163,31 +272,29 @@ header>button:hover {
 
 }
 
-.fullName {
+
+/* edit employee */
+
+.editEmployee {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    justify-content: center;
+    display: none;
 }
 
-.fullName>input {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.452);
-    width: 60%;
-    padding: 0.8rem 1.2rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    color: #fafafa;
-    outline: none;
-    letter-spacing: 1.3px;
-}
-
-.addEmployee_create {
+.editEmployee_form {
     background-color: rgb(20, 20, 20);
     color: white;
     padding: 2rem 1rem;
     width: 40%;
-    height: 80%;
+    height: 90%;
     display: flex;
     align-items: center;
     /* justify-content: start; */
@@ -196,44 +303,23 @@ header>button:hover {
     border: 1px solid rgba(255, 255, 255, 0.452);
     box-shadow: 0 0 1rem rgba(65, 65, 65, 0.719);
     border-radius: 0.5rem;
-    padding: 2rem 4rem;
+    padding: 0.8rem 4rem;
 }
-
-
-
-.addEmployee_create>input {
+.otherInputFields{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-left: 4rem;
+}
+.otherInputFields > input{
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.452);
     width: 80%;
-    font-size: 1rem;
-    padding: 1rem;
+    padding: 0.8rem 1.2rem;
     border-radius: 0.5rem;
+    font-size: 1rem;
     color: #fafafa;
     outline: none;
     letter-spacing: 1.3px;
-}
-
-.addEmployee_create>button {
-    width: 30%;
-    height: 40%;
-    color: #fafafa;
-    background-color: rgba(90, 90, 90, 0.685);
-    border: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.addEmployee_create--submit:hover {
-    opacity: 0.5;
-    background-color: rgba(0, 0, 0, 0.664);
-    border: none;
-}
-
-.addEmployee_create input::-webkit-outer-spin-button,
-.addEmployee_create input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
