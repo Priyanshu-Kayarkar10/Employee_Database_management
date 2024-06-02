@@ -1,6 +1,6 @@
 # Hey !
 
-I just build Employee Database Management System using Vanilla Javascript,html,css.
+I just build Employee Data Management System using Vanilla Javascript,html,css.
 
 # Features
 
